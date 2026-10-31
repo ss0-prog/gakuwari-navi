@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*設定読み込み
+-------------------------------*/
+/*共通
+-------------------------------*/
+.clearfix:after {
+  display: block;
+  clear: both;
+  height: 0px;
+  visibility: hidden;
+  content: ".";
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*\*/ /*/ /*MAC IE5*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  transition: 0.2s ease-in-out;
+}
+
+.clear {
+  clear: both;
+}
+
+/*コンテンツ幅設定*/
+/*レスポンシブ設定*/
+body {
+  padding: 0;
+  margin: 0 auto;
+  border: 0 none;
+  color: #333333;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.sp-zone {
+  display: none;
+}
+@media screen and (max-width: 780px) {
+  .sp-zone {
+    display: block;
+  }
+}
+
+.pc-zone {
+  display: block;
+}
+@media screen and (max-width: 780px) {
+  .pc-zone {
+    display: none;
+  }
+}/*# sourceMappingURL=setting.css.map */

@@ -1,0 +1,1 @@
+<svg id="_イヤー_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M599,1V449H1V1H599m1-1H0V450H600V0h0Z"/><path class="cls-1" d="M597.59,1L300,298.59,2.41,1H597.59m2.41-1H0L300,300,600,0h0Z"/></svg>

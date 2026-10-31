@@ -1,0 +1,125 @@
+
+/*設定読み込み
+-------------------------------*/
+//@import '_setting.scss'; //基本設定
+//@import '_pagenavi.scss'; //ページャー設定
+//@import '_contact.scss'; //お問い合わせ設定
+//@import '_cms-content.scss'; //cms投稿基本設定
+
+/*共通
+-------------------------------*/
+
+.clearfix:after { 
+	display:block;
+	clear:both;
+	height:0px;
+	visibility:hidden;
+	content:".";
+}
+.clearfix {
+	min-height: 1px;
+}
+
+* html .clearfix {
+	height: 1px;
+	/*\*//*/ /*MAC IE5*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+a {
+	text-decoration: none; 
+	color: #000;
+}
+
+a:hover {
+	//hover時に動きをつけたい場合の処理
+	-webkit-transition: 0.2s ease-in-out; 
+	-moz-transition: 0.2s ease-in-out; 
+	-o-transition: 0.2s ease-in-out; 
+	transition: 0.2s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.clear {clear:both;}
+
+
+//body部分のベース処理
+@mixin base_body {
+	padding: 0;
+	margin: 0 auto;
+	border: 0 none;
+    color: #333333;
+    //font-family: 'Nunito',"游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    //font-family: 'Noto Serif JP', serif;
+}
+
+@mixin base_flex {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+@mixin patblr {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+
+/*コンテンツ幅設定*/
+$width_max: 100%;
+// $width_ll: 1400px;
+$width_l: 1260px;
+$width_m: 1120px;
+$width_s: 1000px;
+$width_in: 660px;
+$width_max_tablet: 780px;
+$width_max_sp: 640px;
+$width_max_sp_s: 420px;
+$width_max_sp_ss: 340px;
+
+/*レスポンシブ設定*/
+$breakpoint: (
+  min_1440: 'screen and (min-width: 1440px)',
+  min_1320: 'screen and (min-width: 1320px)',
+  min_1001: 'screen and (min-width: 1001px)',
+  mq_375: 'screen and (max-width: 375px)',
+  mq_480: 'screen and (max-width: 480px)',
+  mq_640: 'screen and (max-width: 640px)',
+  mq_800: 'screen and (max-width: 800px)',
+  mq_in: 'screen and (max-width: 660px)',
+  mq_s: 'screen and (max-width: 1000px)',
+  mq_m: 'screen and (max-width: 1120px)',
+  mq_l: 'screen and (max-width: 1259px)',
+);
+
+
+//ベースとなるCSSの処理
+body {@include base_body;}
+.right {float: right;}
+.left {float: left;}
+.sp-zone {
+	display: none;
+	@media screen and (max-width: $width_max_tablet) {
+		display: block;
+	}
+}
+.pc-zone {
+	display: block;
+	@media screen and (max-width: $width_max_tablet) {
+		display: none;
+	}
+}
+
+
+

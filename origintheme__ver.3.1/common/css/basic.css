@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/*設定読み込み
+-------------------------------*/
+/*共通
+-------------------------------*/
+.clearfix:after {
+  display: block;
+  clear: both;
+  height: 0px;
+  visibility: hidden;
+  content: ".";
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*\*/ /*/ /*MAC IE5*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  transition: 0.2s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.clear {
+  clear: both;
+}
+
+/*コンテンツ幅設定*/
+/*レスポンシブ設定*/
+body {
+  padding: 0;
+  margin: 0 auto;
+  border: 0 none;
+  color: #333333;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.sp-zone {
+  display: none;
+}
+@media screen and (max-width: 780px) {
+  .sp-zone {
+    display: block;
+  }
+}
+
+.pc-zone {
+  display: block;
+}
+@media screen and (max-width: 780px) {
+  .pc-zone {
+    display: none;
+  }
+}
+
+/* ヘッダーに適用 */
+header {
+  width: 100%;
+}
+
+.errorpage {
+  background-image: linear-gradient(90deg, rgba(168, 202, 240, 0.52), rgba(255, 255, 255, 0.52));
+  color: #333;
+  height: 80vh;
+  width: 100%;
+  padding: 20vh 10% 0;
+  line-height: 2em;
+}
+.errorpage__title {
+  font-size: 5vw;
+  margin-bottom: 70px;
+  font-weight: bold;
+}
+.errorpage__title span {
+  font-size: 6vw;
+}
+.errorpage__text strong {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 145%;
+}
+.errorpage__text a {
+  display: inline-block;
+  margin-block-start: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.errorpage__text a:hover {
+  opacity: 0.7;
+}/*# sourceMappingURL=basic.css.map */
