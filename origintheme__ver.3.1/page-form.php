@@ -5,8 +5,11 @@ while ( have_posts() ) : the_post();?>
 
 <main id="topcontent" class="topcontent wrapcontent">
     <div class="wrapcontentcenter"> 
-        <div class="mail-title">
-            <p class="mail-title-top">学割情報 掲載申込フォーム</p>
+        <div class="mail-title gw-contact">
+            <header class="gw-svc-hero gw-contact-hero bseyifbslink">
+                <p class="gw-svc-hero__en">FORM</p>
+                <h1 class="gw-svc-hero__title">学割情報 掲載申込フォーム</h1>
+            </header>
             <?php the_content(); ?>     
           
            

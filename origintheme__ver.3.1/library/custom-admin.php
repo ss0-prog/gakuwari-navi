@@ -38,7 +38,7 @@ function add_fancybox( $html ) {
 
 // フッターWordPressリンクを非表示に
 function custom_admin_footer() {
- echo '<a href="mailto:mail@example.com">お問い合わせ</a>';
+ echo '<a href="mailto:webteam@afullo.com">お問い合わせ</a>';
  }
 add_filter('admin_footer_text', 'custom_admin_footer');
 
@@ -107,7 +107,7 @@ echo '<p>左のメニューから操作をしてください。<br /><br />
 </ul>
 <br>
 <a class="manual" href="http://tamuratomo.com/manual/操作マニュアル.pdf" target="_blank"><span class="dashicons dashicons-info"></span>操作マニュアルをダウンロード</a><br><br>
-操作方法が不明な場合は、<a href="mailto:mail@example.com">アトリエあふろwebteam</a>へ</p>
+操作方法が不明な場合は、<a href="mailto:webteam@afullo.com">アトリエあふろwebteam</a>へ</p>
 <style type="text/css" media="all">#mymenu li { background-color:#f5f5f5; padding:10px; margin-bottom:10px; border-radius:4px;}
 .edit { text-align:right; padding-right:10px; margin-bottom:0px; }
 .manual { display:block; padding:4px; background:#F08C00; color:#fff; font-weight:bold; border-radius:5px; text-align:center; width:50%; margin:10px auto;}</style>';

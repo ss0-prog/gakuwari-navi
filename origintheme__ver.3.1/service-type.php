@@ -64,7 +64,7 @@ get_header(); ?>
                                 <div class="top-content-item">
                                     <div class="top-content-img">
                                         <a href="<?php the_permalink(); ?>" class="image-container">
-                                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="hover-zoom">
+                                            <img loading="lazy" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="hover-zoom">
                                         </a>
                                     </div>
                                     <a href="<?php the_permalink(); ?>"><p class="top-content-text"><?php the_title(); ?></p></a>

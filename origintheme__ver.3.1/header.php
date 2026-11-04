@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja" class="no-js">
 <head>
-    <!-- (アクセス解析のタグは、公開用のこのリポジトリでは省略しています) -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PV3NK392');</script>
+    <!-- End Google Tag Manager -->
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="alternate"  hreflang="ja" href="<?php bloginfo('url'); ?>"/>
@@ -65,7 +71,10 @@ if (is_post_type_archive() || is_single()) {
 ?>
 
 <body id="<?php echo $catSlug; ?>-pagezone" class="<?php echo $catSlug; ?>">
-    <!-- (アクセス解析のタグは、省略) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV3NK392"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <header>
 
@@ -79,12 +88,12 @@ if (is_post_type_archive() || is_single()) {
                         <?php if (is_front_page() && is_home()) : ?>
                         <h1 class="head-title-h1">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="head-title">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/gakuwariNAVI-logo-main001.png" alt="学割NAVI">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/gakuwariNAVI-logo-main001.png" alt="学割NAVI" width="1200" height="628">
                             </a>
                         </h1>
                         <?php else : ?>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="head-title">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/gakuwariNAVI-logo-main001.png" alt="学割NAVI">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/gakuwariNAVI-logo-main001.png" alt="学割NAVI" width="1200" height="628">
                         </a>
                         <?php endif; ?>
                         
@@ -93,7 +102,6 @@ if (is_post_type_archive() || is_single()) {
                             //フォームを読み込む
                             get_search_form() 
                         ?>
-                        <?php if ( is_search() ) : ?><h2><?php the_search_query(); ?></h2><?php endif; ?>
 
                     </div>
                 </div>
@@ -297,7 +305,6 @@ if (is_post_type_archive() || is_single()) {
             <div class="sidebar-search">
                 <!-- 検索フォーム -->
                 <?php get_search_form(); ?>
-                <?php if ( is_search() ) : ?><h2><?php the_search_query(); ?></h2><?php endif; ?>
 
                 <!-- 詳細検索ボタン -->
                 <button class="toggle-advanced-search">詳細検索</button>

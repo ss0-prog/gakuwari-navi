@@ -34,13 +34,7 @@ get_header(); ?>
                         $total_pages = $custom_query->max_num_pages;
                     ?>
 
-                    <!-- 件数付き見出し -->
-                    <div class="category-header" style="display: flex; align-items: center; gap: 1em; margin-bottom: 1em;">
-                        <h1><?php echo esc_html(single_cat_title('', false)); ?> の学割一覧</h1>
-                        <span class="post-count" style="font-size: 14px; color: #666;">
-                            全<?php echo $total_posts; ?>件  <?php echo $paged; ?> / <?php echo $total_pages; ?> ページ表示中
-                        </span>
-                    </div>
+                    <?php gw_archive_hero('GENRE', single_cat_title('', false) . ' の学割一覧', (int) $total_posts, (int) $paged, (int) $total_pages); ?>
 
                     <div class="top-content-gef-ser">
                         <?php
@@ -49,15 +43,20 @@ get_header(); ?>
                                 <a href="<?php the_permalink(); ?>" class="content-nuiafe">
                                     <div class="top-content-img">
                                         <!-- 基本的な画像表示 -->
+                                        <?php gw_ticket_visual(); ?>
+                                        <?php /* 【テスト前の表示】チケットを無効に戻すときは、上の行を消し、この囲みのコメント記号を外す
                                         <?php if (has_post_thumbnail()) : ?>
                                             <?php the_post_thumbnail('medium', array('class' => 'hover-zoom')); ?>
                                         <?php else : ?>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/images/example-image/no-image.jpg" alt="No Image" class="hover-zoom">
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/example-image/no-image.jpg" alt="No Image" class="hover-zoom">
                                         <?php endif; ?>
+                                        */ ?>
                                     </div>
                                     
+                                    <?php /* 【テスト前の表示】チケットを無効に戻すときは、この囲みのコメント記号を外す
                                     <p class="top-content-text"><?php the_title(); ?></p>
                                     <p class="top-content-subtext"><?php echo get_post_meta(get_the_ID(), 'service_campany', true); ?></p>
+                                    */ ?>
                                     <div class="favorite item-list-favorite" data-post-id="<?php the_ID(); ?>">
                                         <a href="#" class="favorite-icon favorite-off"></a>
                                         <a href="#" class="favorite-icon favorite-on hide"></a>

@@ -36,13 +36,7 @@ get_header(); ?>
                             $total_pages = $custom_query->max_num_pages;
                         ?>
 
-                        <!-- 件数付き見出し -->
-                        <div class="category-header" style="display: flex; align-items: center; gap: 1em; margin-bottom: 1em;">
-                            <h1><?php echo esc_html(single_cat_title('', false)); ?>の学割一覧</h1>
-                            <span class="post-count" style="font-size: 14px; color: #666;">
-                                全<?php echo $total_posts; ?>件中  <?php echo $paged; ?> / <?php echo $total_pages; ?> ページ表示中
-                            </span>
-                        </div>
+                    <?php gw_archive_hero('FOR WHO', single_cat_title('', false) . ' の学割一覧', (int) $total_posts, (int) $paged, (int) $total_pages); ?>
 
                         <?php
                             // 投稿があるか確認
@@ -53,18 +47,23 @@ get_header(); ?>
                                     
                                     <a href="<?php the_permalink(); ?>" class="content-nuiafe-ser">
                                         <div class="top-content-img">
+                                            <?php gw_ticket_visual(); ?>
+                                            <?php /* 【テスト前の表示】チケットを無効に戻すときは、上の行を消し、この囲みのコメント記号を外す
                                             <?php if (has_post_thumbnail()): ?>
                                                 <?php the_post_thumbnail('afullo-thumb-200', ['class' => 'hover-zoom', 'style' => 'width: 100%; height: auto; border-radius: var(--radius-md);']); ?>
                                             <?php else: ?>
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/example-image/no-image.jpg" alt="No Image" class="hover-zoom">
+                                                <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/example-image/no-image.jpg" alt="No Image" class="hover-zoom">
                                             <?php endif; ?>
+                                            */ ?>
                                         </div>
+                                        <?php /* 【テスト前の表示】チケットを無効に戻すときは、この囲みのコメント記号を外す
                                         <p class="top-content-text"><?php the_title(); ?></p>
                                         <?php
                                         $service_campany = get_post_meta(get_the_ID(), 'service_campany', true);
                                         if (!empty($service_campany)) : ?>
                                             <p class="top-content-subtext"><?php echo esc_html($service_campany); ?></p>
                                         <?php endif; ?>
+                                        */ ?>
 
                                         <div class="top-content-tags">
                                             <div class="related-articles__meta-cat">
@@ -92,6 +91,7 @@ get_header(); ?>
                     </div>
                 </div>
 
+                <?php if ( ! empty( $custom_query ) ) : ?>
                 <!-- ページネーション -->
                 <div class="pagination">
                     <?php
@@ -100,6 +100,7 @@ get_header(); ?>
                     ));
                     ?>
                 </div>
+                <?php endif; ?>
             </div>
             <div class="main-topcontent-b">
                 <?php get_sidebar('sidebar'); ?>
